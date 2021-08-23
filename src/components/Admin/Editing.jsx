@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useContext } from 'react';
 import { useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import { TourContext } from '../Contexts/TourContext';
+import { GoodsContext } from '../Context/GoodsContext';
 
 
 const useStyles = makeStyles(theme => ({
@@ -28,11 +28,11 @@ const Editing = () => {
     let history = useHistory()
     let classes = useStyles()
 
-    const { edit, editTour, saveEditTour } = useContext(TourContext)
+    const { edit, editTour, saveEditTour } = useContext(GoodsContext)
     const [values, setValues] = useState(null)
 
     useEffect(() => {
-        editTour(id)
+        editGoods(id)
     }, [id])
 
     useEffect(() => {

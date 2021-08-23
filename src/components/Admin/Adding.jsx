@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { IconButton, Paper, TextField, makeStyles, Button } from '@material-ui/core';
-import { TourContext } from '../Contexts/TourContext';
+import { GoodsContext } from '../Context/GoodsContext'
 import { useHistory } from 'react-router-dom';
 
 
@@ -33,7 +33,7 @@ const Adding = () => {
         description: ''
     })
 
-    const { addTour } = useContext(TourContext)
+    const { addGoods } = useContext(GoodsContext)
     const handleInp = (e) => {
         let obj = {
             ...values,
