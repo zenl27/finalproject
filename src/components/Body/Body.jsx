@@ -1,110 +1,192 @@
-import React, { useContext } from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
+import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import { useHistory } from 'react-router-dom';
-import { authContext } from '../Contexts/AuthContextProvider';
+import Container from '@material-ui/core/Container';
+import Carusel from '../Carusel/Carusel';
+import sony from '../Vid/sony.mp4'
+import { makeStyles } from '@material-ui/styles';
+import GoodsCard from '../Goods/GoodsCard'
+import GoodsList from '../Goods/GoodsList'
+import Footer from './Footer';
+import { Grid } from '@material-ui/core';
+
 
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        height: '100vh',
+
+    fullScreen: {
+        position: 'relative',
+        minHeight: '80vh',
+        display: 'flex',
+        flexDirection: 'column',
     },
-    image: {
-        backgroundImage: 'url(https://www.advantour.com/img/kyrgyzstan/nature/kyrgyzstan-nature3.jpg)',
-        backgroundRepeat: 'no-repeat',
-        backgroundColor:
-            theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+
+    fullScreenVideo: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        marginTop: '-220px',
     },
-    paper: {
-        margin: theme.spacing(8, 4),
+    fullScreenContent: {
+        padding: '50px, 15px',
+        backgroundColor: 'rgba(52, 52, 52, 0.4)',
+
+        width: '1450px',
+        height: '547px',
+
+
+        position: 'relative',
+        zIndex: 2,
+        display: 'flex',
+        flex: "1, 1, auto",
+        justifyContent: 'center',
+        alignItems: 'center ',
+        flexDirection: 'column',
+        textTransform: 'uppercase',
+        marginTop: "-55px",
+        marginLeft: '-270px'
+
+    },
+    BodyfullScreenTitle: {
+        fontSize: '50px',
+        letterSpacing: '17px',
+        fontWeight: 700,
+        margin: '0px, 0ps, 20px, 0px',
+        color: 'white'
+    },
+    fullScreenText: {
+        fontSize: '18px',
+        letterSpacing: '15px',
+        color: 'white'
+    },
+    content: {
+        backgroundColor: 'brown',
+        margin: 0
+    },
+
+
+
+    aboutContent: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
     },
-    avatar: {
-        margin: theme.spacing(1),
-        backgroundColor: theme.palette.grey.main,
+    rightContent: {
     },
-    form: {
-        width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing(1),
+    textAbout: {
+        color: 'white',
+        fontSize: '20px',
+        fontWeight: 700
     },
-    submit: {
-        margin: theme.spacing(3, 0, 2),
+    titleAbout: {
+        color: 'white',
+        fontSize: '23px',
+        marginBottom: '25px',
+        width: '400px',
+        paddingBottom: '30px',
+        fontWeight: 700
     },
-}));
+    leftContent: {
+        // marginTop: '-110px',
+        width: '70vw',
+        // marginRight: '100px',
+        color: 'white',
+        fontSize: '20px',
+        textAlign: 'center',
+        paddingBottom: '30px',
+        lineHeight: 1.5,
+        marginTop: '50px'
 
-export default function Registration() {
-    const history = useHistory()
-    const classes = useStyles();
+    },
+    topContent: {
+        // paddingBottom: '80px',
+        display: 'flex',
+        width: '60px',
+        height: '60px',
+        backgroundSize: '60px 60px',
+        backgroundImage: 'url(https://triptokyrgyzstan.com/themes/custom/tripping/images/kyrgyzstan_flag_tunduk.svg)',
+        // justifyContent: 'center',
+        // left: 0,
+        // right: 0,
+        // position: 'absolute',
+    }
 
-    const { registerUser } = useContext(authContext);
+
+}))
+
+
+
+
+export default function Body() {
+    const classes = useStyles()
 
     return (
-        <Grid container component="main" className={classes.root}>
-            <CssBaseline />
-            <Grid item xs={false} sm={4} md={7} className={classes.image} />
-            <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-                <div className={classes.paper}>
-                    <Avatar className={classes.avatar}>
-                        <LockOutlinedIcon />
-                    </Avatar>
-                    <Typography component="h1" variant="h5">
-                        Регистрация
-                    </Typography>
-                    <form onSubmit={(e) => registerUser(e, history)} className={classes.form} noValidate>
-                        <TextField
-                            variant="outlined"
-                            margin="normal"
-                            required
-                            fullWidth
-                            id="email"
-                            label="Введите почту"
-                            name="email"
-                            autoComplete="email"
-                            autoFocus
-                        />
-                        <TextField
-                            variant="outlined"
-                            margin="normal"
-                            required
-                            fullWidth
-                            name="password"
-                            label="Введите пароль"
-                            type="password"
-                            id="password"
-                            autoComplete="current-password"
-                        />
-
-                        <Button
-                            type="submit"
-                            fullWidth
-                            variant="contained"
-                            color="grey"
-                            className={classes.submit}
-                        >
-                            Регистрироваться
-                        </Button>
-                        <Grid container>
-                        </Grid>
-                        <Box mt={5}>
-                        </Box>
-                    </form>
+        <Grid>
+            <Container maxWidth='md' >
+                <div className={classes.fullScreen}>
+                    <div className={classes.fullScreenContent}>
+                        <div className={classes.BodyfullScreenTitle} >make believe</div>
+                        <div className={classes.fullScreenText}>SONY</div>
+                    </div>
                 </div>
-            </Grid>
+
+                <video className={classes.fullScreenVideo} autoPlay loop muted
+                //     style={{
+                //         width: '100vw',
+                //         height: 800,
+                //         marginTop: '-220px',
+
+                //         marginLeft: '-109px'
+
+                //     }}
+                >
+                    <source src={sony} type="Vid/sony.mp4" />
+                </video>
+
+                <div className={classes.aboutContent}>
+                    <div className={classes.topContent}></div>
+                    <div className={classes.leftContent}>
+
+                        Welcome to official site reseller of Sony Company
+                    </div>
+
+                    {/* <div className={classes.leftContent}>
+                    <div className={classes.titleAbout}>О нас</div>
+                    <div className={classes.textAbout}>Мы занимаемся походами по Кыргызстану <br /> С нами вы проведете свое время с комфортом <br /> Организовываем туры уже более 10 лет<br /> delectus cum necessitatibus ipsam repudiandae? Atque, fuga.</div>
+                </div> */}
+                    <div className={classes.rightContent}>
+                        <Carusel maxWidth="md" className={classes.content} />
+
+                    </div>
+                </div>
+
+                <Container maxWidth="md" style={{
+                    paddingTop: '30px'
+                }}>
+                    <h2 style={{
+                        color: 'white',
+
+                    }}>
+                        Our Productions
+                    </h2>
+                    <div className={classes.contentOfBody}>
+                        <ToursList />
+
+
+                    </div>
+                </Container>
+                <Footer />
+
+            </Container >
+
         </Grid>
+
+
+
+
+
     );
 }

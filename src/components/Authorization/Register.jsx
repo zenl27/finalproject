@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         height: '100vh',
     },
     image: {
-        backgroundImage: 'url(https://www.advantour.com/img/kyrgyzstan/nature/kyrgyzstan-nature3.jpg)',
+        backgroundImage: 'url(https://www.nippon.com/ru/ncommon/contents/currents/113083/113083.jpg)',
         backgroundRepeat: 'no-repeat',
         backgroundColor:
             theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
@@ -72,7 +72,7 @@ export default function Registration() {
                             required
                             fullWidth
                             id="email"
-                            label="Введите почту"
+                            label="type email"
                             name="email"
                             autoComplete="email"
                             autoFocus
@@ -83,7 +83,7 @@ export default function Registration() {
                             required
                             fullWidth
                             name="password"
-                            label="Введите пароль"
+                            label="type password"
                             type="password"
                             id="password"
                             autoComplete="current-password"

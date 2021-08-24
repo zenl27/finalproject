@@ -60,7 +60,7 @@ export default function Login() {
                         required
                         fullWidth
                         id="email"
-                        label="Введите почту"
+                        label="type email"
                         name="email"
                         autoComplete="email"
                         autoFocus
@@ -71,7 +71,7 @@ export default function Login() {
                         required
                         fullWidth
                         name="password"
-                        label="Введите пароль"
+                        label="passsword"
                         type="password"
                         id="password"
                         autoComplete="current-password"
@@ -85,7 +85,7 @@ export default function Login() {
                             color="grey"
                             className={classes.submit}
                         >
-                            log in
+                            Log in
                         </Button></Link>
 
 
