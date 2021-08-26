@@ -1,8 +1,6 @@
 import { Container, makeStyles } from '@material-ui/core';
 import React from 'react';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import WhatsAppIcon from '@material-ui/icons/WhatsApp';
-import TelegramIcon from '@material-ui/icons/Telegram';
 import { Link } from 'react-router-dom';
 
 
@@ -45,18 +43,6 @@ const Footer = () => {
                 }} />
                 <br /> Instagram
             </div>
-            <div className={classes.tabl2}>
-                <WhatsAppIcon
-                /> <br /> WhatsApp
-
-            </div>
-            <div className={classes.tabl3}>
-                {/* <Link to='https://web.telegram.org/'> */}
-                <TelegramIcon />
-                <br /> Telegram
-                {/* </Link> */}
-            </div>
-
         </div>
         // </React.Fragment >
     );

@@ -26,7 +26,7 @@ const Adding = () => {
     const classes = useStyles()
     const history = useHistory()
     const [values, setValues] = useState({
-        title: '',
+        name: '',
         image: '',
         type: '',
         price: '',
@@ -44,7 +44,7 @@ const Adding = () => {
 
     const handleSave = () => {
         if (!values.image) values.image = "https://www.sony.com/image/sonyview1?fmt=png&wid=1200"
-        addTour(values)
+        addGoods(values)
         history.push('/list')
     }
 
@@ -52,7 +52,7 @@ const Adding = () => {
 
     return (
         <Paper elevation={3} className={classes.paper} >
-            <h1 style={{ textAlign: 'center' }}>Добавить товар</h1>
+            <h1 style={{ textAlign: 'center' }}>Add product</h1>
             <div style={{ display: 'flex', justifyContent: 'space-around', color: 'black' }}>
                 <div>
                     <img style={{ height: '300px', width: '400px' }} src={values.image ? values.image : "https://www.sony.com/image/sonyview1?fmt=png&wid=1200"} alt="sony pic" />

@@ -1,6 +1,6 @@
 import axios from "axios"
 import React, { useReducer } from "react"
-import { AUTH_API } from "../helpers/constants"
+import { AUTH_API } from "../Helpers/Constans"
 
 
 export const authContext = React.createContext()
@@ -31,9 +31,6 @@ const AuthContextProvider = ({ children }) => {
             email: e.target[0].value,
             password: e.target[2].value
         }
-
-
-
         try {
             const res = await axios.post(`${AUTH_API}/registration`, newUser)
             console.log(res);

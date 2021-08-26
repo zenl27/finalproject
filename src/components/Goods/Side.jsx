@@ -44,17 +44,17 @@ const Side = () => {
         const search = new URLSearchParams(history.location.search)
         search.set('price_lte', value)
         history.push(`${history.location.pathname}?${search.toString()}`)
-        getTours(history)
+        getGoods(history)
         setPrice(value)
     }
 
     const handleChangeType = (event) => {
-        if (event.target.value === 'all') {
-            history.push(`${history.location.pathname.replace('type')}`)
-            getGoods(history)
-            setType(event.target.value)
-            return
-        }
+        // if (event.target.value === 'all') {
+        //     history.push(`${history.location.pathname.replace('type')}`)
+        //     getGoods(history)
+        //     setType(event.target.value)
+        //     return
+        // }
         const search = new URLSearchParams(history.location.search)
         search.set('type', event.target.value)
         history.push(`${history.location.pathname}?${search.toString()}`)
@@ -66,7 +66,7 @@ const Side = () => {
         // history.push(`${history.location.pathname.replace('price_lte')}`)
         getGoods(history)
         setType(getType())
-        setPrice(getPrice())
+        // setPrice(getPrice())
     }
     return (
 
@@ -85,7 +85,7 @@ const Side = () => {
                     >
                         <FormLabel component="legend">Productions</FormLabel>
                         <RadioGroup aria-label="gender" name="gender1" value={type} onChange={handleChangeType}>
-                            <FormControlLabel value="Cameras" control={<Radio />} label="Cameras" />
+                            <FormControlLabel value="Camera" control={<Radio />} label="Cameras" />
                             <FormControlLabel value="Phones" control={<Radio />} label="Phones" />
                             <FormControlLabel value="ТV" control={<Radio />} label="ТV" />
                         </RadioGroup>

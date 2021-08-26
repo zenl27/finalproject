@@ -2,10 +2,10 @@ import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import Carusel from '../Carusel/Carusel';
-import sony from '../Vid/sony.mp4'
+import Swipe from '../SwipeShit/Swipe'
+import sonycom from '../Vid/sonycom.mp4'
 import { makeStyles } from '@material-ui/styles';
-import GoodsCard from '../Goods/GoodsCard'
+import GoodsCard from '../Goods/GoodsCard';
 import GoodsList from '../Goods/GoodsList'
 import Footer from './Footer';
 import { Grid } from '@material-ui/core';
@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 700
     },
     titleAbout: {
-        color: 'white',
+        color: 'black',
         fontSize: '23px',
         marginBottom: '25px',
         width: '400px',
@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
         // marginTop: '-110px',
         width: '70vw',
         // marginRight: '100px',
-        color: 'white',
+        color: 'black',
         fontSize: '20px',
         textAlign: 'center',
         paddingBottom: '30px',
@@ -104,10 +104,10 @@ const useStyles = makeStyles((theme) => ({
     topContent: {
         // paddingBottom: '80px',
         display: 'flex',
-        width: '60px',
-        height: '60px',
+        width: '80px',
+        height: '80px',
         backgroundSize: '60px 60px',
-        backgroundImage: 'url(https://triptokyrgyzstan.com/themes/custom/tripping/images/kyrgyzstan_flag_tunduk.svg)',
+        backgroundImage: 'url(https://cdn.freebiesupply.com/images/large/2x/sony-logo-black-and-white.png)',
         // justifyContent: 'center',
         // left: 0,
         // right: 0,
@@ -143,7 +143,7 @@ export default function Body() {
 
                 //     }}
                 >
-                    <source src={sony} type="Vid/sony.mp4" />
+                    <source src={sonycom} type="video/mp4" />
                 </video>
 
                 <div className={classes.aboutContent}>
@@ -153,12 +153,9 @@ export default function Body() {
                         Welcome to official site reseller of Sony Company
                     </div>
 
-                    {/* <div className={classes.leftContent}>
-                    <div className={classes.titleAbout}>О нас</div>
-                    <div className={classes.textAbout}>Мы занимаемся походами по Кыргызстану <br /> С нами вы проведете свое время с комфортом <br /> Организовываем туры уже более 10 лет<br /> delectus cum necessitatibus ipsam repudiandae? Atque, fuga.</div>
-                </div> */}
+                    { }
                     <div className={classes.rightContent}>
-                        <Carusel maxWidth="md" className={classes.content} />
+                        <Swipe maxWidth="md" className={classes.content} />
 
                     </div>
                 </div>
@@ -167,13 +164,13 @@ export default function Body() {
                     paddingTop: '30px'
                 }}>
                     <h2 style={{
-                        color: 'white',
+                        color: 'black',
 
                     }}>
                         Our Productions
                     </h2>
                     <div className={classes.contentOfBody}>
-                        <ToursList />
+                        <GoodsList />
 
 
                     </div>

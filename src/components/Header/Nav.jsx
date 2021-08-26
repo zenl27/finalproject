@@ -18,7 +18,7 @@ import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { GoodsContext } from '../Context/GoodsContext'
-import BurgerMenu from './BurgerMenu';
+import Burger from './Burger';
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Grid } from '@material-ui/core';
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 20,
     },
     back: {
-        backgroundColor: 'rgba(52, 52, 52, 0.3)',
+        backgroundColor: '#212121',
         color: "white",
         elevation: 0
 
@@ -100,7 +100,7 @@ export default function Navbar() {
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
     const history = useHistory()
     const [searchVal, setSearchVal] = useState(getSearchval() || '')
-    const { getGoods, cardLength, getCardLength } = useContext(GoodsContext)
+    const { getGoods, cartLength, getCartLength } = useContext(GoodsContext)
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -187,12 +187,7 @@ export default function Navbar() {
                 <p>Messages</p>
             </MenuItem>
             <MenuItem>
-                <IconButton aria-label="show 11 new notifications" color="inherit">
-                    <Badge badgeContent={11} color="secondary">
-                        <NotificationsIcon />
-                    </Badge>
-                </IconButton>
-                <p>Notifications</p>
+
             </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
                 <IconButton
@@ -224,14 +219,14 @@ export default function Navbar() {
                             aria-label="open drawer"
                         >
                             {/* <MenuIcon /> */}
-                            <BurgerMenu />
+                            <Burger />
                         </IconButton>
                         <Link to={'/'} style={{
                             color: 'white',
                             textDecoration: 'none'
                         }}>
                             <Typography className={classes.title} variant="h6" noWrap>
-                                All-Goods.kg
+                                SONY
                             </Typography>
                         </Link>
 
@@ -250,7 +245,7 @@ export default function Navbar() {
                                 onChange={handleValue}
                             />
                         </div>
-                        <Link to="/card" style={{ color: "white" }}>
+                        <Link to="/cart" style={{ color: "white" }}>
                             <IconButton>
                                 <Badge badgeContent={cartLength} color="secondary">
                                     <ShoppingCartIcon style={{ color: "white" }} />

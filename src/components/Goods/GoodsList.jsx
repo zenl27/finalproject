@@ -6,7 +6,7 @@ import { GoodsContext } from '../Context/GoodsContext';
 import GoodsCard from '../Goods/GoodsCard'
 
 import { Pagination } from '@material-ui/lab';
-import { getPage } from '../helpers/function';
+import { getPage } from '../Helpers/Page'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -18,11 +18,12 @@ const useStyles = makeStyles((theme) => ({
 const GoodsList = () => {
     const classes = useStyles()
     const history = useHistory()
-    const { goods, getGoods, paginatedPages } = useContext(GoodsContext)
+    const { Goods, getGoods, paginatedPages } = useContext(GoodsContext)
     const [page, setPage] = useState(getPage())
-    console.log(goods);
+
+
     useEffect(() => {
-        getGoods(history)
+        getGoods(history);
     }, [])
 
     function getPage(e, page) {
@@ -45,11 +46,11 @@ const GoodsList = () => {
         <>
             <Grid container spacing={3} justify="space-evenly" style={{ marginTop: '90px' }}>
                 {
-                    goods ? (
-                        goods.map((item, index) => (
-                            <TourCard item={item} key={index} />
+                    Goods ? (
+                        Goods.map((item, index) => (
+                            <GoodsCard item={item} key={index} />
                         ))
-                    ) : (<h1>Please wait...</h1>)
+                    ) : (<h1>Loading...</h1>)
                 }
             </Grid>
 

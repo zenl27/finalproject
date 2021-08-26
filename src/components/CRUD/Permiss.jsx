@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from '@material-ui/core';
-import { API } from '../helpers/constants';
+import { API } from '../Helpers/Constans';
 import GoodsList from '../Goods/GoodsList';
 import Adding from './Adding';
 

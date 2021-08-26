@@ -51,7 +51,7 @@ const Editing = () => {
 
     const handleSave = () => {
         history.push('/list')
-        saveEditTour(values)
+        saveEditGoods(values)
     }
     console.log(values, "    values")
     return (

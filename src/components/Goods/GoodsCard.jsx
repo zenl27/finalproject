@@ -17,12 +17,12 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { useContext } from 'react';
 import { GoodsContext } from '../Context/GoodsContext';
-import Editing from '../CRUD/Editing';
+import Editing from '../CRUD/Editing'
 import { Button } from '@material-ui/core';
 import { Link, useHistory } from 'react-router-dom';
 import DeleteIcon from '@material-ui/icons/Delete';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import { authContext } from '../Contexts/AuthContextProvider';
+import { authContext } from '../Context/AuthContext';
 import { useState } from 'react';
 
 const useStyles = makeStyles((theme) => ({
@@ -55,12 +55,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function GoodsCard({ item }) {
+
     const classes = useStyles();
     const { email } = useContext(authContext)
 
-    const admin = 'admin_nagibator@gmail.com'
+    const admin = 'admin_page@gmail.com'
 
-    const { getCard, deleteGoods, addGoodsInCard, checkGoodsInCard } = useContext(GoodsContext)
+    const { getGoods, deleteGoods, addGoodsInCart } = useContext(GoodsContext) //checkGoodsInCart
     const [isAdmin, setIsAdmin] = useState(false)
 
 
@@ -78,7 +79,7 @@ export default function GoodsCard({ item }) {
 
     return (
         <Card className={classes.root}>
-            <Link to={`/detail/${item.id}`} style={{ textDecoration: 'none', color: 'black' }}>
+            <Link to={`/info/${item.id}`} style={{ textDecoration: 'none', color: 'black' }}>
                 <CardHeader
                     title={item.title}
                     subheader={item.type}
@@ -97,13 +98,13 @@ export default function GoodsCard({ item }) {
             </Link>
 
             <Typography variant="body2" color="textSecondary">
-                {item.price}
+                {item.price}$
             </Typography>
             <CardContent>
                 <IconButton
                     aria-label='share'
-                    onClick={() => addGoodsInCard(item)}
-                    color={checkGoodsInCard(item.id) ? "secondary" : "inherit"}
+                    onClick={() => addGoodsInCart(item)}
+                // color={checkGoodsInCart(item.id) ? "secondary" : "inherit"}    написать в контекст
                 >
                     <ShoppingCartIcon />
                 </IconButton>

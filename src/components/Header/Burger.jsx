@@ -12,7 +12,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-router-dom';
-import { API } from '../helpers/constants';
+import { API } from '../Helpers/Constans';
 import { IconButton } from '@material-ui/core';
 
 const useStyles = makeStyles({
@@ -63,10 +63,10 @@ export default function BurgerMenu() {
                         <Link to='/list'><ListItemText primary={text} /></Link>
                     </ListItem>
                 ))}
-                {['Card'].map((text, index) => (
+                {['Cart'].map((text, index) => (
                     <ListItem button key={text}>
                         <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <Link to='/card'><ListItemText primary={text} /></Link>
+                        <Link to='/cart'><ListItemText primary={text} /></Link>
                     </ListItem>
                 ))}
             </List>

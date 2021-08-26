@@ -13,7 +13,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from 'react-router-dom';
-import { authContext } from '../Contexts/AuthContext';
+import { authContext } from '../Context/AuthContext';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Registration() {
+export default function Register() {
     const history = useHistory()
     const classes = useStyles();
 
