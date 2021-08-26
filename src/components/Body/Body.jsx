@@ -3,7 +3,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Swipe from '../SwipeShit/Swipe'
-import sonycom from '../Vid/sonycom.mp4'
+// import Sonycom from '../Vid/sonycom.mp4'
 import { makeStyles } from '@material-ui/styles';
 import GoodsCard from '../Goods/GoodsCard';
 import GoodsList from '../Goods/GoodsList'
@@ -73,6 +73,8 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        // backgroundColor: 'black',
+        // width: '100vw'   
     },
     rightContent: {
     },
@@ -124,7 +126,7 @@ export default function Body() {
     const classes = useStyles()
 
     return (
-        <Grid>
+        <div>
             <Container maxWidth='md' >
                 <div className={classes.fullScreen}>
                     <div className={classes.fullScreenContent}>
@@ -143,14 +145,14 @@ export default function Body() {
 
                 //     }}
                 >
-                    <source src={sonycom} type="video/mp4" />
+                    {/* <source src={Sonycom} type="video/mp4" /> */}
                 </video>
 
                 <div className={classes.aboutContent}>
                     <div className={classes.topContent}></div>
                     <div className={classes.leftContent}>
 
-                        Welcome to official site reseller of Sony Company
+                        <h1>WELCOME TO OUR RESELLER OF SONY</h1>
                     </div>
 
                     { }
@@ -165,9 +167,10 @@ export default function Body() {
                 }}>
                     <h2 style={{
                         color: 'black',
+                        textAlign: 'center',
 
                     }}>
-                        Our Productions
+                        OUR PRODUCTIONS
                     </h2>
                     <div className={classes.contentOfBody}>
                         <GoodsList />
@@ -179,7 +182,7 @@ export default function Body() {
 
             </Container >
 
-        </Grid>
+        </div>
 
 
 

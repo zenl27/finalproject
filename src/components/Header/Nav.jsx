@@ -179,12 +179,12 @@ export default function Navbar() {
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
-                <IconButton aria-label="show 4 new mails" color="inherit">
+                {/* <IconButton aria-label="show 4 new mails" color="inherit">
                     <Badge badgeContent={4} color="secondary">
                         <MailIcon />
                     </Badge>
-                </IconButton>
-                <p>Messages</p>
+                </IconButton> */}
+                {/* <p>Messages</p> */}
             </MenuItem>
             <MenuItem>
 
@@ -256,7 +256,7 @@ export default function Navbar() {
                         </Link>
                         <div className={classes.grow} />
                         <div className={classes.sectionDesktop}>
-                            <IconButton aria-label="show 4 new mails" color="inherit">
+                            {/* <IconButton aria-label="show 4 new mails" color="inherit">
                                 <Badge badgeContent={0} color="secondary">
                                     <MailIcon />
                                 </Badge>
@@ -265,7 +265,7 @@ export default function Navbar() {
                                 <Badge badgeContent={0} color="secondary">
                                     <NotificationsIcon />
                                 </Badge>
-                            </IconButton>
+                            </IconButton> */}
                             <IconButton
                                 edge="end"
                                 aria-label="account of current user"

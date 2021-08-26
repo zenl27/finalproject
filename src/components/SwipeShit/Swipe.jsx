@@ -41,10 +41,10 @@ const useStyles = makeStyles((theme) => ({
         width: '100vw'
     },
     header: {
-        marginTop: 35,
+        // marginTop: 35,
         display: 'flex',
         alignItems: 'center',
-        height: 50,
+        // height: 50,
         paddingLeft: theme.spacing(4),
         backgroundColor: theme.palette.background.default,
         color: 'white',
@@ -81,14 +81,14 @@ function Swipe() {
         <div
             className={classes.root}
             style={{
-                marginTop: "-20px",
+                marginTop: "150px",
 
 
             }}
         >
             <Paper style={{
                 background: 'transparent',
-                backgroundColor: 'rgba(52, 52, 52, 0.3)',
+                backgroundColor: 'rgba(52, 52, 52, 0.3)'
 
 
             }} square elevation={0} className={classes.header}>

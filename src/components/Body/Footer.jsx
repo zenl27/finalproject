@@ -39,7 +39,6 @@ const Footer = () => {
         <div className={classes.container}>
             <div className={classes.tabl1}>
                 <InstagramIcon style={{
-
                 }} />
                 <br /> Instagram
             </div>

@@ -5,24 +5,42 @@
       "image": "https://www.ixbt.com/img/n1/news/2021/0/3/4622275873_large.jpg",
       "type": "Camera",
       "price": "4000",
-      "description": "Компания Sony представила полнокадровую камеру Alpha 1. По словам производителя, это «самая технологически совершенная и инновационная модель» в его ассортименте. На фоне конкурирующих моделей новинка выделяется возможностями серийной съёмки и видеосъёмки.",
+      "description": "Компания Sony представила полнокадровую камеру Alpha 1. По словам производителя, это «самая технологически совершенная ",
       "id": 1
     },
     {
-      "title": "Phone",
-      "image": "https://www.ixbt.com/img/n1/news/2021/0/3/4622275873_large.jpg",
+      "title": "Xperia III",
+      "image": "https://www.sony.ru/image/bec37fd1196426136aae242507e874b0?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF",
       "type": "Phones",
       "price": "4000",
-      "description": "Компания Sony представила полнокадровую камеру Alpha 1. По словам производителя, это «самая технологически совершенная и инновационная модель» в его ассортименте. На фоне конкурирующих моделей новинка выделяется возможностями серийной съёмки и видеосъёмки.",
+      "description": "Скорость является ключевым достоинством Xperia 1 III",
       "id": 2
     },
     {
-      "title": "TV",
-      "image": "https://www.ixbt.com/img/n1/news/2021/0/3/4622275873_large.jpg",
+      "title": "Sony Bravia TV",
+      "image": "https://www.sony.ru/image/a2c53dd5f08b9322130a5702a1d187d4?fmt=pjpeg&bgcolor=FFFFFF&bgc=FFFFFF&wid=2515&hei=1320",
       "type": "ТV",
       "price": "4000",
-      "description": "Компания Sony представила полнокадровую камеру Alpha 1. По словам производителя, это «самая технологически совершенная и инновационная модель» в его ассортименте. На фоне конкурирующих моделей новинка выделяется возможностями серийной съёмки и видеосъёмки.",
+      "description": "Оцените поразительное качество изображения в разрешении Full HD",
       "id": 3
+    },
+    {
+      "name": "",
+      "image": "https://www.sony.com/image/sonyview1?fmt=png&wid=1200",
+      "type": "Camera",
+      "price": "1200",
+      "description": "",
+      "title": "Camera Z",
+      "id": 4
+    },
+    {
+      "name": "",
+      "image": "https://www.sony.com/image/sonyview1?fmt=png&wid=1200",
+      "type": "Phone",
+      "price": "1000",
+      "description": "",
+      "title": "Phone",
+      "id": 5
     }
   ]
 }
